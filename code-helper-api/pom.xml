@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.taiji.codehelper</groupId>
+    <artifactId>code-helper-root</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>code-helper-api</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- Web 接口 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- 引入 core 公共模块 -->
+    <dependency>
+      <groupId>org.taiji.codehelper</groupId>
+      <artifactId>code-helper-core</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- 如果 api 直接调用 project 模块里的 service，可以依赖 project 模块 -->
+    <dependency>
+      <groupId>org.taiji.codehelper</groupId>
+      <artifactId>code-helper-project</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- 如果 api 需要调用 prompt 模块的服务，也一并依赖 -->
+    <dependency>
+      <groupId>org.taiji.codehelper</groupId>
+      <artifactId>code-helper-prompt</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+</project>
